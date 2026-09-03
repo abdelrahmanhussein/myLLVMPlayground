@@ -30,16 +30,19 @@ generate_modified_ir: modified.ll
 
 test: modified.ll
 	$(CXX) $< -o $@
+	mkdir -p build
+	cp $@ ./build/test
+	rm -f $@
 
 generate_executable: test
 
 runTest: generate_executable
-	./test 10
-	./test 20
+	./build/test 10
+	./build/test 20
 
 runTestOnly:
-	./test 10
-	./test 20
+	./build/test 10
+	./build/test 20
 
 clean:
-	rm -f unmodified.ll modified.ll cfgWorkload
+	rm -f unmodified.ll modified.ll build/test

@@ -27,13 +27,6 @@ void modifyInstruction(Function &F)
                     I.replaceAllUsesWith(NewInst);
                     I.eraseFromParent();
                 }
-                // llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(op);
-                // if (CI && CI->getZExtValue() == 0xdead)
-                // {
-                //     llvm::Value *NewValue = llvm::ConstantInt::get(op->getType(), 0xbbbb);
-                //     op.set(NewValue);
-                // }
-            
         }
     }
 }
