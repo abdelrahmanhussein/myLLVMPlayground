@@ -1,5 +1,0 @@
-# ninja log v5
-1	5853	1788405465243704473	CMakeFiles/instructionModifier.dir/inst_modifier.cpp.o	ffd0aa260a6e5905
-5854	6000	1788405465392922242	libinstructionModifier.so	98b48c39e5bdc41c
-3	5000	1788406322097480524	CMakeFiles/instructionModifier.dir/inst_modifier.cpp.o	ffd0aa260a6e5905
-5000	5070	1788406322167728605	libinstructionModifier.so	98b48c39e5bdc41c
