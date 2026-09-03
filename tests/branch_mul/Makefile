@@ -1,6 +1,6 @@
-PASS_NAME ?= instructionModifier
-PASS_DIR ?= $(HOME)/myllvmspace/$(PASS_NAME)/build
-PASS_LIB = $(PASS_DIR)/lib$(PASS_NAME).so
+PASS ?= instructionModifier
+PASS_DIR ?= $(HOME)/myllvmspace/$(PASS)/build
+PASS_LIB = $(PASS_DIR)/lib$(PASS).so
 
 CXX = clang++
 OPT = opt
@@ -24,7 +24,7 @@ unmodified.ll: *.cpp
 generate_unmodified_ir: unmodified.ll
 
 modified.ll: unmodified.ll build_pass
-	$(OPT) -load-pass-plugin=$(PASS_LIB) -passes=$(PASS_NAME) $< -S -o $@
+	$(OPT) -load-pass-plugin=$(PASS_LIB) -passes=$(PASS) $< -S -o $@
 
 generate_modified_ir: modified.ll
 
